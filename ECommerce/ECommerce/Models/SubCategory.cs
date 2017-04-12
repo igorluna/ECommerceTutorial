@@ -13,8 +13,10 @@ namespace ECommerce.Models
         public string SubCategoryName { get; set; }
 
         #region Category
+
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
+
         #endregion
     }
 }

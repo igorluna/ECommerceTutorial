@@ -17,8 +17,15 @@ namespace ECommerce.Models
         public int OrderId { get; set; }
         public DateTime? OrderDate { get; set; }
         public decimal OrderTotal { get; set; }
+
+        #region Customer
+
         public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
+
+        #endregion
+
         public virtual ICollection<OrderLine> OrderLines { get; set; }
+
     }
 }

@@ -14,9 +14,12 @@ namespace ECommerce.Models
             Products = new HashSet<Product>();
             SubCategories = new HashSet<SubCategory>();
         }
+        #region Category
 
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+
+        #endregion
 
         public virtual ICollection<Product> Products { get; set; }
         public virtual ICollection<SubCategory> SubCategories { get; set; }
