@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,6 +11,10 @@ namespace ECommerce.Models
     public class SubCategory
     {
         public int SubCategoryId { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Subcategory Name")]
         public string SubCategoryName { get; set; }
 
         #region Category

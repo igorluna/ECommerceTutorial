@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,9 @@ namespace ECommerce.Models
         }
 
         public int ProductId { get; set; }
+
+        [Required]
+        [Display(Name = "Product Name")]
         public string ProductName { get; set; }
         public string Details { get; set; }
         public decimal Price { get; set; }
