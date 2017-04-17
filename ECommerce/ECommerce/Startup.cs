@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ECommerce.DataContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace ECommerce
 {
@@ -29,6 +31,8 @@ namespace ECommerce
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +59,8 @@ namespace ECommerce
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            
         }
     }
 }

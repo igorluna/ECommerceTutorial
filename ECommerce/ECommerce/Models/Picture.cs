@@ -12,7 +12,6 @@ namespace ECommerce.Models
     {
         public Picture()
         {
-            Products = new HashSet<Product>();
         }
 
         public int PictureId { get; set; }
@@ -20,6 +19,8 @@ namespace ECommerce.Models
         [StringLength(100)]
         public string FileName { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        public int ProductId { get; set; }
+
+        public virtual Product Products { get; set; }
     }
 }
