@@ -12,9 +12,9 @@ namespace ECommerce.Services.Infrastructure
 
         SubCategory GetById(int id);
 
-        void Insert(SubCategory customer);
+        void Insert(SubCategory subCategory);
 
-        void Update(SubCategory customer);
+        void Update(SubCategory subCategory);
 
         void Delete(int id);
 
